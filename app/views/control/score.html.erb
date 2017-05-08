@@ -5,4 +5,10 @@
 <p>End time : <%= @end_time%></p>
 
 <p>Résultat <%= @result %></p>
+
+<p>Vous avez marqué <%= @result[:score] %>points</p>
+
+<p>Trouvé en <%= @result[:time]%> secondes</p>
+
+<p>Cela signifie <%= @result[:translation]%></p>
 <%= link_to "New game ?", game_path, class:"btn btn-primary" %>

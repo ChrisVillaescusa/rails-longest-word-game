@@ -4,6 +4,22 @@ class ControlController < ApplicationController
   end
 
   def score
+    if session[:nb_of_games]
+     session[:nb_of_games] += 1
+    else
+     session[:nb_of_games]=1
+    end
+
+    if session[:scores]
+      session[:average_score] += session[:average_score]
+    else
+
+    end
+
+
+
+
+
     @start_time = Time.parse(params[:start_time])
     @attempt = params[:query]
     @grid = params[:grid].split("")
