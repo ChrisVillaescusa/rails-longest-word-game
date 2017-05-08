@@ -1,0 +1,17 @@
+
+<img src="..." alt="..." class="img-rounded">
+<h1>Control#game</h1>
+<p>Find me in app/views/control/game.html.erb</p>
+
+<form action="/score" class="form-inline" style="padding: 20px;">
+  <label for="question">Generating grid</label>
+  <p> <%= @grid %> </p>
+  <input type="hidden" name="grid" value='<%= @grid.join %>' >
+
+  <input type="hidden" name="start_time" value='<%= Time.now %>' >
+
+
+  <input type="text" id="question" name="query" placeholder="Your best word ?">
+  <input class="btn btn-primary btn-lg" type="submit" value="Go on!">
+  <%= link_to "Regenerate ?", game_path, class:"btn btn-danger btn-lg" %>
+</form>
